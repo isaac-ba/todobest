@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+
+<div class="row">
+  <body ng-app="besttodo" ng-controller="controller">
+  <div class="col-md-6 col-md-offset-1">
+    <h1>Best ToDo</h1>
+  <input ng-model="task" class="input-group form-control" placeholder="Type task">
+  <br>
+  <button class="btn" ng-click="addTask()" ng-model="task ">Add Task</button>
+  </div>
+</div>
+
+<br>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-1">
+      <ul ng-repeat="task in tasks track by $index">
+        <li>{{task}}</li>
+      </ul>
+    </div>
+  </div>
+
+
+<script type="text/javascript" src="/node_modules/angular/angular.js"></script>
+<script type="text/javascript" src="app.js"></script>
+<script type="text/javascript" src="controller.js"></script>
+<script type="text/javascript" src="service.js"></script>
+
+</body>
+</html>
